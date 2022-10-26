@@ -1,3 +1,5 @@
+#ifndef intruso
+#define intruso
 #include <string>
 #include <iostream>
 #include <vector>
@@ -17,3 +19,5 @@ class Intruso{
         void set_senha_vazada(std::string vazou);
         std::string crack_senha();
 };
+
+#endif 
