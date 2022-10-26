@@ -5,14 +5,22 @@
 
     void set_senha_vazada(std::string vazou)
     {
-        _senha=vazou;
+        for(size_t i=0;i< vazou.size();i++)
+        {
+            if(i<10)
+            {
+                _num[i]=vazou[i];
+            }else{
+               _senha[i]=vazou[i];
+            }
+        }
         for(size_t i=0;i< vazou.size();i++)
         {
             switch (_senha[i])
             {
-            case /* constant-expression */:
-                /* code */
-                break;
+            case A:
+                _A=
+                break;-
             
             default:
                 break;
@@ -22,13 +30,5 @@
     }
     std::string crack_senha()
     {
-        switch (vazou)
-        {
-        case /* constant-expression */:
-            /* code */
-            break;
         
-        default:
-            break;
-        }
     }
