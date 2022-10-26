@@ -6,6 +6,19 @@
     void set_senha_vazada(std::string vazou)
     {
         _senha=vazou;
+        for(size_t i=0;i< vazou.size();i++)
+        {
+            switch (_senha[i])
+            {
+            case /* constant-expression */:
+                /* code */
+                break;
+            
+            default:
+                break;
+            } 
+        }
+          
     }
     std::string crack_senha()
     {
