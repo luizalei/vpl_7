@@ -9,5 +9,13 @@
     }
     std::string crack_senha()
     {
-
+        switch (vazou)
+        {
+        case /* constant-expression */:
+            /* code */
+            break;
+        
+        default:
+            break;
+        }
     }
