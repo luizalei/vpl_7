@@ -59,5 +59,6 @@
             n++;
         }
     }
+    cout << senha << endl;
   }
     
