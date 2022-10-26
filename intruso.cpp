@@ -3,8 +3,13 @@
 #include <vector>
 #include <string>
 
+    Intruso::Intruso (std::vector<int> num, std::string senha)
+    {
+        _num= num;
+        _senha= senha;
+    }
 
-    void set_senha_vazada(std::string vazou)
+    void Intruso:: set_senha_vazada(std::string vazou)
     {
         for(size_t i=0;i<vazou.size();i++)
         {
@@ -20,19 +25,19 @@
             switch(_senha[i])
             {
             case 'A':
-                _A=_num[i];
+                _A[i]=_num[i];
                 break;
             case 'B':
-                _B= _num[i];
+                _B[i]= _num[i];
                 break;
             case 'C':
-                _C= _num[i];
+                _C[i]= _num[i];
                 break;
             case 'D':
-                _D= _num[i];
+                _D[i]= _num[i];
                 break;
             case 'E':
-                _E= _num[i];
+                _E[i]= _num[i];
                 break;
             default:
                 break;

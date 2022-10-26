@@ -5,7 +5,7 @@
 #include <vector>
 
 class Intruso{
-    private:
+    private:  
         std::string _senha;
         std::vector<int> _num;
         std::vector<int> _A;
@@ -18,6 +18,7 @@ class Intruso{
     public:
         void set_senha_vazada(std::string vazou);
         std::string crack_senha();
+        Intruso(std::vector<int> num, std::string senha);
 };
 
 #endif 
