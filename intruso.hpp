@@ -5,6 +5,7 @@
 class Intruso{
     private:
         std::string _senha;
+        std::vector<int> _num;
         std::vector<int> _A;
         std::vector<int> _B;
         std::vector<int> _C;

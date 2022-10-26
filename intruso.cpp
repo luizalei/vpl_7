@@ -5,7 +5,7 @@
 
     void set_senha_vazada(std::string vazou)
     {
-        for(size_t i=0;i< vazou.size();i++)
+        for(size_t i=0;i<vazou.size();i++)
         {
             if(i<10)
             {
@@ -14,14 +14,25 @@
                _senha[i]=vazou[i];
             }
         }
-        for(size_t i=0;i< vazou.size();i++)
+        for(size_t i=0;i< _senha.size();i++)
         {
-            switch (_senha[i])
+            switch(_senha[i])
             {
-            case A:
-                _A=
-                break;-
-            
+            case 'A':
+                _A=_num[i];
+                break;
+            case 'B':
+                _B= _num[i];
+                break;
+            case 'C':
+                _C= _num[i];
+                break;
+            case 'D':
+                _D= _num[i];
+                break;
+            case 'E':
+                _E= _num[i];
+                break;
             default:
                 break;
             } 
