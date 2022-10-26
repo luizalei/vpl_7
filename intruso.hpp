@@ -5,12 +5,12 @@
 class Intruso{
     private:
         std::string _senha;
-        std::vector<char> _A;
-        std::vector<char> _B;
-        std::vector<char> _C;
-        std::vector<char> _D;
-        std::vector<char> _E;
-        std::vector<char> _comp; 
+        std::vector<int> _A;
+        std::vector<int> _B;
+        std::vector<int> _C;
+        std::vector<int> _D;
+        std::vector<int> _E;
+        std::vector<int> _comp; 
 
     public:
         void set_senha_vazada(std::string vazou);
