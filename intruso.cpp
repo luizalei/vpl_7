@@ -59,6 +59,6 @@
             n++;
         }
     }
-    cout << senha << endl;
+    std::cout << senha << std::endl;
   }
     
