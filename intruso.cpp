@@ -68,21 +68,24 @@
                         break;
                     }    
                 }
-                k++;
-                //ifs ou um for pra comparar a _comp
-                //colocar resultado no vector resultado
-                if (_comp[i]==_comp[i+2])
-                {
-                    resposta.push_back(_comp[i]);
-                }
-                if (_comp[i]==_comp[i+3])
+                k++; 
+                //adiciona para acessar todas as letras da
+                //posição desejada
             } 
             k=0; 
-            //zerar o k para recomeçar 
+            //zerar o k para recomeçar na posição seguinte
         }
+//ifs ou um for pra comparar a _comp
+//colocar resultado no vector resultado
+       /* for(int r=0;r<)
+            if (_comp[i]==_comp[i+2])
+            {
+                resposta.push_back(_comp[i]);
+            }
+            if (_comp[i]==_comp[i+3])
+*/
 
-
-
+//codigo vic
     std::string senha;
     std::vector<int> n;
     for(size_t i = 0; i < m.size(); i++){
