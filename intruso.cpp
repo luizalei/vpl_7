@@ -1,64 +1,64 @@
 #include "intruso.hpp"
 #include <iostream>
-#include <vector>
-#include <string>
 
-    Intruso::Intruso (std::vector<int> num, std::string senha)
-    {
-        _num= num;
-        _senha= senha;
-    }
+void Intruso::set_senha_vazada(std::string vazou)
+{
+  numbers[count] = vazou.substr(0, 10);
+  letters[count] = vazou.substr(10);
 
-    void Intruso:: set_senha_vazada(std::string vazou)
+  count++;
+}
+
+std::string Intruso::crack_senha()
+{
+  while (senha.length() < 6)
+  {
+    // std::cout << senha.length() << std::endl;
+    for (int i = 0; i < count - 1; i++)
     {
-        for(size_t i=0;i<vazou.size();i++)
+      for (int j = senha.length(); j < 6; j++)
+      {
+        int letterPos1 = (int(letters[i][j]) - 65) * 2;
+        int letterPos2 = (int(letters[i + 1][j]) - 65) * 2;
+
+        // std::cout << letterPos1 << " " << letterPos2 << std::endl;
+        // if (letterPos1 == letterPos2)
+        //   break;
+
+        int a1 = int(numbers[i][letterPos1]) - 48;
+        int a2 = int(numbers[i][letterPos1 + 1]) - 48;
+
+        int b1 = int(numbers[i + 1][letterPos2]) - 48;
+        int b2 = int(numbers[i + 1][letterPos2 + 1]) - 48;
+
+        // std::cout << "a1: " << a1 << std::endl;
+        // std::cout << "a2: " << a2 << std::endl;
+        // std::cout << "b1: " << b1 << std::endl;
+        // std::cout << "b2: " << b2 << std::endl;
+
+        if (a1 == b1)
         {
-            if(i<10)
-            {
-                _num[i]=vazou[i];
-            }else{
-               _senha[i]=vazou[i];
-            }
+          senha = senha.append(std::to_string(a1));
+          continue;
         }
-        for(size_t i=0;i< _senha.size();i++)
+        else if (a1 == b2)
         {
-            switch(_senha[i])
-            {
-            case 'A':
-                _A[i]=_num[i];
-                break;
-            case 'B':
-                _B[i]= _num[i];
-                break;
-            case 'C':
-                _C[i]= _num[i];
-                break;
-            case 'D':
-                _D[i]= _num[i];
-                break;
-            case 'E':
-                _E[i]= _num[i];
-                break;
-            default:
-                break;
-            } 
+          senha = senha.append(std::to_string(a1));
+          continue;
         }
-          
-    }
-    std::string crack_senha()
-    {
-       
-    std:: string senha;
-    int n = 0;
-    for(int i = 0; i < m.size(); i++){
-        if(i != 3*n){
-            if(m[i] == n[i]){
-                senha[a] = m[i];
-                a++;
-            }
-            n++;
+        else if (a2 == b1)
+        {
+          senha = senha.append(std::to_string(a2));
+          continue;
         }
+        else if (a2 == b2)
+        {
+          senha = senha.append(std::to_string(a2));
+          continue;
+        }
+      }
     }
-    std::cout << senha << std::endl;
   }
-    
+
+  return senha;
+}
