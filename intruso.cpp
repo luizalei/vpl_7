@@ -20,37 +20,27 @@
                _senha[i]=vazou[i];
             }
         }
-        for(size_t i=0;i< _senha.size();i++)
-        {
-            switch(_senha[i])
-            {
-            case 'A':
-                _A[i]=_num[i];
-                break;
-            case 'B':
-                _B[i]= _num[i];
-                break;
-            case 'C':
-                _C[i]= _num[i];
-                break;
-            case 'D':
-                _D[i]= _num[i];
-                break;
-            case 'E':
-                _E[i]= _num[i];
-                break;
-            default:
-                break;
-            } 
-        }
-          
+        _A.push_back(_num[0]); 
+        _A.push_back(_num[1]); 
+        _B.push_back(_num[2]); 
+        _B.push_back(_num[3]); 
+        _C.push_back(_num[4]); 
+        _C.push_back(_num[5]); 
+        _D.push_back(_num[6]); 
+        _D.push_back(_num[7]); 
+        _E.push_back(_num[8]); 
+        _E.push_back(_num[9]); 
     }
+          
     std::string crack_senha()
     {
        
+
+
+       
     std:: string senha;
-    int n = 0;
-    for(int i = 0; i < m.size(); i++){
+    std::vector<int> n;
+    for(size_t i = 0; i < m.size(); i++){
         if(i != 3*n){
             if(m[i] == n[i]){
                 senha[a] = m[i];
